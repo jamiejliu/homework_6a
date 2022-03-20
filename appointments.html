@@ -19,22 +19,22 @@
         <div id="sidenav">
             <h2>
             <ul id="links">
-                <li> Home</li>
+                <li> <a href="index.html">Home</a></li>
                 <li class='active'><a href="#appointments">Appointments</a></li>
                 <li><a href="#labresults">Lab Results</a></li>
                 <li><a href="#forms">Forms</a></li>
             </ul>
         </h2>
         </div>
-    </body>
 
     <div id="content">
         <h1> Upcoming Appointments </h1>
         <p> You have 1 Upcoming Appointment(s): </p>
-        <div id="upcoming-appointments">
+
+        <div class="upcoming-appointments">
                 <p class="appointment-title"> COVID-19 Tartan Test </p>
-                <p id="appointment-date"> March 18, 2022
-                <a id="details-link" href="details"> View Details </a></p>
+                <p> March 18, 2022 </p>
+                <p id="expandModal"> View More Details </p>
         </div>
 
     <h1> Previous Appointments </h1>
@@ -66,5 +66,28 @@
             </tr>
         </table>
 
+        <div id="details-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <p class="appointment-title">Appointment Type</p>
+            </div>
+
+            <div class="modal-body">
+                <p>Appointment Details </p>
+                <div class="col1">
+                    <p> Type:
+                    <br> Date:
+                    <br> Time:
+                    </p>
+                </div>
+                <div class="col2">
+                    <p> Location: </p>
+                </div>
+            </div>
+          </div>
+
+        </div>
     </div>
+</body>
 </html>

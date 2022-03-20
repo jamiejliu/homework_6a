@@ -10,7 +10,38 @@
     </head>
 
     <body>
+        <div id="topnav">
+            <img src="logo.png" id="logo">
+                <a href="#profile">Profile</a>
+                <a href="#alerts">Alerts</a>
+        </div>
 
+        <div id="sidenav">
+            <h2>
+            <ul id="links">
+                <li> <a href="index.html">Home</a></li>
+                <li class='active'><a href="#appointments">Appointments</a></li>
+                <li><a href="#labresults">Lab Results</a></li>
+                <li><a href="#forms">Forms</a></li>
+            </ul>
+        </h2>
+        </div>
+    </body>
+    <div id="content">
+        <h1> Appointment Confirmed </h1>
+        <p> You have 1 upcoming appointment(s) </p>
 
+        <div id="appointment-confirmation">
+            <p class="appointment-title"> COVID-19 Tartan Test </p>
+            <p id="appointment-date"> March 18, 2022
+            <br> 9:45 AM <a class="details-link" href="details"> Edit Appointment </a>
+            <br> UC E Garage <a class="details-link" href="details"> Cancel Appointment </a>
+            </p>
+        </div>
+        <div>
+            <button id="return-home"> <a class="buttonlink" href="index.html"> Return to Home Page</a></button>
+        </div>
+
+    </div>
     </body>
 </html>
