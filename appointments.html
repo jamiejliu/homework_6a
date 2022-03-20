@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- javascript -->
+        <script src="script.js" type="text/javascript"> </script>
+        <!-- fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    </head>
+
+    <body>
+        <div id="topnav">
+            <img src="logo.png" id="logo">
+                <a href="#profile">Profile</a>
+                <a href="#alerts">Alerts</a>
+        </div>
+
+        <div id="sidenav">
+            <h2>
+            <ul id="links">
+                <li> Home</li>
+                <li class='active'><a href="#appointments">Appointments</a></li>
+                <li><a href="#labresults">Lab Results</a></li>
+                <li><a href="#forms">Forms</a></li>
+            </ul>
+        </h2>
+        </div>
+    </body>
+
+    <div id="content">
+        <h1> Upcoming Appointments </h1>
+        <p> You have 1 Upcoming Appointment(s): </p>
+        <div id="upcoming-appointments">
+                <p class="appointment-title"> COVID-19 Tartan Test </p>
+                <p id="appointment-date"> March 18, 2022
+                <a id="details-link" href="details"> View Details </a></p>
+        </div>
+
+    <h1> Previous Appointments </h1>
+        <table id="previous-appointments-tb">
+            <tr>
+                <th> Appointment Date </th>
+                <th> Appointment Type </th>
+                <th> Lab Status </th>
+            </tr>
+            <tr>
+                <td> Feb. 2, 2022 </td>
+                <td> COVID-19 Tartan Test </td>
+                <td> <a href="#Complete">Complete</a></td>
+            </tr>
+            <tr>
+                <td> Jan. 29, 2022 </td>
+                <td> COVID-19 Tartan Test </td>
+                <td> <a href="#Complete">Complete</a></td>
+            </tr>
+            <tr>
+                <td> Dec. 12, 2021 </td>
+                <td> COVID-19 Booster  </td>
+                <td> N/A</td>
+            </tr>
+            <tr>
+                <td> Nov. 23, 2021 </td>
+                <td> Flu Shot </td>
+                <td> N/A </td>
+            </tr>
+        </table>
+
+    </div>
+</html>

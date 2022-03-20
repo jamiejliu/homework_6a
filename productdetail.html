@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- javascript -->
+        <script src="script.js" type="text/javascript"> </script>
+        <!-- fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    </head>
+
+
+    <body>
+        <div id="topnav">
+            <img src="logo.png" id="logo">
+                <a href="#profile">Profile</a>
+                <a href="#alerts">Alerts</a>
+        </div>
+
+        <div id="sidenav">
+            <h2>
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li class='active'>Appointments</li>
+                <li><a href="#labresults">Lab Results</a></li>
+                <li><a href="#forms">Forms</a></li>
+            </ul>
+        </h2>
+        </div>
+
+        <div id="content">
+            <div class="col1">
+                <h1>Select Appointment Type</h1>
+                <label class="container">Covid-19 Test
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Covid-19 vaccine
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Flu Shot
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Sleep Consultation
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Stress Consultation
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container">Blood Testing
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+        </div>
+
+         <div class="col2">
+            <h1>Select Appointment Time</h1>
+                <p> View Available Appointments for: </p>
+                    <select>
+                      <option>Monday, Feb. 14</option>
+                      <option>Tuesday, Feb. 15</option>
+                      <option>Wednesday, Feb. 16 </option>
+                      <option>Thursday, Feb. 17 </option>
+                      <option>Friday, Feb. 18</option>
+                  </select>
+            <div class="col1">
+                <div class="col3">
+                    <button class="time"> 9:00 AM </button>
+                    <button class="time"> 9:15 AM </button>
+                    <button class="time"> 9:30 AM</button>
+                    <button class="time"> 9:45 AM </button>
+                    <button class="time"> 10:00 AM </button>
+                    <button class="time"> 10:15 AM </button>
+                    <button class="time"> 10:30 AM </button>
+                </div>
+                <div class="col2">
+                    <button class="time"> 10:45 AM </button>
+                    <button class="time"> 11:00 AM </button>
+                </div>
+            </div>
+
+           <div class="col2">
+                <div class="col3">
+                    <button class="time"> 1:00 PM </button>
+                    <button class="time"> 1:15 PM </button>
+                    <button class="time"> 1:30 PM</button>
+                    <button class="time"> 1:45 PM </button>
+                    <button class="time"> 2:00 PM </button>
+                    <button class="time"> 2:15 PM </button>
+                    <button class="time"> 2:30 PM </button>
+                </div>
+                <div class="col2">
+                    <button class="time"> 2:45 PM </button>
+                    <button class="time"> 3:00 PM </button>
+                    <button class="time"> 3:15 PM </button>
+                    <button class="time"> 3:30 PM </button>
+                </div>
+
+            </div>
+            <div>
+                <a class ="back" href="productbrowsing.html">Back</a>
+                <button id="confirm-button"> Confirm Appointment </button>
+            </div>
+
+        </div>
+
+        </div>
+    </body>

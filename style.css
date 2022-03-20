@@ -1,0 +1,260 @@
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+/*********** TOP NAV ************/
+#topnav {
+  overflow: hidden;
+  background-color: #951120;
+  clear: both;
+}
+
+#topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1%;
+  font-size: 16px;
+  float:  right;
+}
+
+#logo {
+  display: block;
+  padding: 1%;
+  width: 20%;
+  float:  left;
+
+}
+
+/*********** SIDE NAV ************/
+
+h2{
+  font-size:  20px;
+}
+
+#sidenav {
+  height: 100vh;
+  width: 20%;
+  background-color: #e3dac3;
+  float: left;
+}
+
+
+#links {
+  list-style: none;
+}
+
+.active{
+  background-color: #FFF;
+}
+
+
+ul{
+  padding: 0%;
+}
+
+li{
+  padding: 10% 10% 10% 15%;
+}
+
+a{
+  text-decoration: none;
+  color:  #000;
+}
+
+
+a:hover{
+  text-decoration:  underline;
+}
+
+
+/*********** HOME PAGE CONTENT************/
+
+#content {
+  float: left;
+  text-align: left;
+  margin-left: 10%;
+  width: 66%;
+}
+
+button {
+  background-color: #951120;
+  border:  none;
+  color:  white;
+  padding-top: 2%;
+  padding-bottom:  2%;
+  text-align:  center;
+  text-decoration: none;
+  display:  inline-block;
+  font-size:  18px;
+  border-radius: 8px;
+  width:  75%;
+  margin: 1%;
+}
+
+.buttonlink{
+  color: white;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+table {
+  margin:  1%;
+  text-align: left;
+}
+
+#upcoming-appointments-tb, #lab-results-tb, #previous-appointments-tb{
+border:  1px solid #000;
+padding: 2%;
+border-collapse:  collapse;
+width:  90%;
+}
+
+#upcoming-appointments-tb td, #upcoming-appointments-tb th,#lab-results-tb td, #lab-results-tb th, #previous-appointments-tb td, #previous-appointments-tb th{
+  border:  1px solid #000;
+  padding:  1.5%;
+}
+
+#upcoming-appointments-tb th, #lab-results-tb th, #previous-appointments-tb th {
+  padding: 1% 5% 1% 2%;
+  text-align: left;
+  background-color: #FFF;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#upcoming-appointments-tb tr:nth-child(even), #lab-results-tb tr:nth-child(even),#previous-appointments-tb tr:nth-child(even) {
+  background-color: #EAEAEA;
+}
+
+
+/*********** PRODUCT PAGE CONTENT************/
+
+.container {
+  display: block;
+  position: relative;
+  margin-left: 20%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  font-size: 18px;
+  width: 50%;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1%;
+  left: -42%;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #951120;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+#small-button{
+  width: 50%;
+  margin-top:  10%;
+}
+
+.col1 {
+  float:  left;
+  width:  45%;
+}
+
+.col2 {
+  float:  left;
+  width:  50%;
+}
+
+
+/*********** DETAIL PAGE CONTENT************/
+select{
+  padding: 2% 5% 2% 2%;
+  width:  90%;
+}
+
+.time{
+  background-color: #FFF;
+  color: black;
+  border: 2px solid #C4C4C4;
+  margin-top: 10px;
+  width:  auto;
+  padding: 5%;
+  font-size: 14px;
+  padding: 5% 5% 5% 5%;
+}
+
+.col3{
+  float:  left;
+  width: 40%;
+}
+
+
+#confirm-button{
+  margin-top:  10%;
+  margin-left: 8%;
+  width: 50%;
+}
+
+.back{
+  margin-left: 5%;
+}
+
+
+/*********** APPOINTMENTS PAGE CONTENT************/
+#upcoming-appointments {
+  width: 33%;
+  border: 1px solid #C4C4C4;
+  padding:  10px;
+  box-shadow:  5px 10px 8px #EAEAEA;
+  margin-bottom: 5%;
+}
+
+#upcoming-appointments:hover {
+  box-shadow: 5px 10px 8px #C4C4C4;
+}
+
+.appointment-title{
+  font-size: 18px;
+  font-weight: bolder;
+  padding-bottom: 0.5%;
+}
+
+#details-link{
+  text-align: right;
+  float: right;
+}
