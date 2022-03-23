@@ -255,8 +255,8 @@ select{
 
 
 .confirm-button{
-  margin-top:  10%;
-  margin-left: 8%;
+  margin-top:  5%;
+  margin-left: 18%;
   width: 50%;
 }
 
@@ -348,6 +348,19 @@ select{
   padding: 2px 16px;
 }
 
+
+#expandModal{
+  background-color: #FFF;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  left: 10%;
+}
+
+#expandModal:hover{
+  text-decoration: underline;
+})
 
 /*********** CONFIRMATION PAGE CONTENT************/
 #return-home{

@@ -6,7 +6,7 @@ function appt(type, date, time) {
 }
 
 
-// get appointment type
+// store appointment type
 function getType() {
     var type = document.querySelector('input[name="appointmentType"]:checked').value;
     sessionStorage.setItem("apptType", type);
@@ -14,9 +14,10 @@ function getType() {
 }
 
 
-// store appointment date HUHHH
+// store appointment date
 function getDate() {
-    var date = document.querySelector("#dateDropdown").value;
+    var dropDown = document.getElementById("dateDropdown");
+    var date = dropDown.value;
     sessionStorage.setItem("apptDate", date);
     console.log(date);
 }
@@ -29,6 +30,12 @@ function getTime() {
     console.log(time);
 }
 
+//call type, date, time
+function confirmTypeDateTime() {
+    getType();
+    getDate();
+    getTime();
+}
 
 // update confirmation page
 function confirmAppointmentType() {

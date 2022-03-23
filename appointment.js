@@ -43,8 +43,8 @@ function loadAppointments() {
 
 // Create Modal for Upcoming Appointments
 function apptModal(type, date, time) {
-  var modal = document.getElementById("details-modal");
-  var lnk = document.getElementById("modalLink");
+  var modal = document.getElementById("detailsModal");
+  var btn = document.getElementById("expandModal");
   var span = document.getElementsByClassName("close")[0];
   let modalType = document.createElement("p");
   let modalDate = document.createElement("p");
@@ -58,7 +58,10 @@ function apptModal(type, date, time) {
   modalContent.append(modalDate);
   modalContent.append(location);
 
-  modal.style.display = "block";
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
 
   span.onclick = function() {
     modal.style.display = "none";

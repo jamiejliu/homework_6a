@@ -30,14 +30,22 @@
 
     <div id="content">
         <h1> Upcoming Appointments </h1>
-        <button> <a class="buttonlink" href="productbrowsing.html"> Schedule New Appointment</a> </button>
+        <button> <a class="buttonlink" href="productdetail.html"> Schedule New Appointment</a> </button>
         <p id="upcomingText"> </p>
 
+//fix content by calling on saved ones//
         <div class="upcoming-appointments" id=upcomingAppointments>
-                <p class="appointment-title"> COVID-19 Tartan Test </p>
-                <p> March 18, 2022 </p>
-                <p id="expandModal"> View More Details </p>
+                <p class="appointment-title"> </p>
+                <p> //date// </p>
+                <button id="expandModal"> View More Details </button>
         </div>
+
+        <div id="detailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modalContent"></p>
+        </div>
+
 
     <h1> Previous Appointments </h1>
         <table id="previous-appointments-tb">
@@ -68,11 +76,7 @@
             </tr>
         </table>
 
-        <div id="details-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="modalContent"></p>
-        </div>
+
     </div>
 </div>
 </body>
