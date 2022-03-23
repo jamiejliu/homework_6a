@@ -4,7 +4,8 @@
         <!-- styles -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- javascript -->
-        <script src="script.js" type="text/javascript"> </script>
+        <script src="main.js" type="text/javascript"> </script>
+        <script src="appointment.js" type="text/javascript"> </script>
         <!-- fonts -->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     </head>
@@ -32,77 +33,137 @@
             <div class="col1">
                 <h1>Select Appointment Type</h1>
                 <label class="container">Covid-19 Test
-                  <input type="radio" checked="checked" name="radio">
+                  <input type="radio" value="Covid-19 Test" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
 
-                <label class="container">Covid-19 vaccine
-                  <input type="radio" name="radio">
+                <label class="container">Covid-19 Vaccine
+                  <input type="radio" value="COVID-19 Vaccine" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Flu Shot
-                  <input type="radio" name="radio">
+                  <input type="radio" value="Flu Shot" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Sleep Consultation
-                  <input type="radio" name="radio">
+                  <input type="radio" value="Sleep Consultation" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Stress Consultation
-                  <input type="radio" name="radio">
+                  <input type="radio" value="Stress Consultation" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="container">Blood Testing
-                  <input type="radio" name="radio">
+                  <input type="radio" value="Blood Testing" name="appointmentType" onclick="getType()">
                   <span class="checkmark"></span>
                 </label>
         </div>
 
-         <div class="col2">
+         <div class="col2" id="timeradio">
             <h1>Select Appointment Time</h1>
                 <p> View Available Appointments for: </p>
-                    <select>
-                      <option>Monday, Feb. 14</option>
-                      <option>Tuesday, Feb. 15</option>
-                      <option>Wednesday, Feb. 16 </option>
-                      <option>Thursday, Feb. 17 </option>
-                      <option>Friday, Feb. 18</option>
+                    <select id="dateDropdown">
+                      <option name="date" value="Monday, Feb. 14" onclick="getDate()"> Monday, Feb. 14</option>
+                      <option name="date" value="Tuesday, Feb. 15" onclick="getDate">Tuesday, Feb. 15</option>
+                      <option name="date" value="Wednesday, Feb. 16" onclick="getDate">Wednesday, Feb. 16 </option>
+                      <option name="date" value="Thursday, Feb. 17" onclick="getDate">Thursday, Feb. 17 </option>
+                      <option name="date" value="Friday, Feb. 18" onclick="getDate">Friday, Feb. 18</option>
                   </select>
-            <div class="col1">
+            <div class="col1" >
                 <div class="col3">
-                    <button class="time"> 9:00 AM </button>
-                    <button class="time"> 9:15 AM </button>
+                    <input type="radio" id="10am" value="10:00 AM" name="time" onclick="getTime()">
+                    <label for="10am">10:00 AM</label><br>
+
+                    <input type="radio" id="1015am" value="10:15 AM" name="time" onclick="getTime()">
+                    <label for="1015am">10:15 AM</label><br>
+
+                    <input type="radio" id="1030am" value="10:30 AM" name="time" onclick="getTime()">
+                    <label for="1030am">10:30 AM</label><br>
+
+                    <input type="radio" id="1045am" value="10:30 AM" name="time" onclick="getTime()">
+                    <label for="1045am">10:45 AM</label><br>
+
+                    <input type="radio" id="11am" value="11:00 AM" name="time" onclick="getTime()">
+                    <label for="11am">11:00 AM</label><br>
+
+                    <input type="radio" id="1115am" value="11:15 AM" name="time" onclick="getTime()">
+                    <label for="1115am">11:15 AM</label><br>
+
+                    <input type="radio" id="1130am" value="11:30 AM" name="time" onclick="getTime()">
+                    <label for="1130am">11:30 AM</label><br>
+
+<!--                     <button class="time"> 9:00 AM </button>
+ -->
+<!--                     <button class="time"> 9:15 AM </button>
                     <button class="time"> 9:30 AM</button>
                     <button class="time"> 9:45 AM </button>
                     <button class="time"> 10:00 AM </button>
                     <button class="time"> 10:15 AM </button>
-                    <button class="time"> 10:30 AM </button>
+                    <button class="time"> 10:30 AM </button> -->
                 </div>
                 <div class="col2">
-                    <button class="time"> 10:45 AM </button>
-                    <button class="time"> 11:00 AM </button>
+                    <input type="radio" id="1145am" value="11:45 AM" name="time" onclick="getTime()">
+                    <label for="1145am">11:45 AM</label><br>
+
+<!--                     <button class="time"> 10:45 AM </button>
+                    <button class="time"> 11:00 AM </button> -->
                 </div>
             </div>
 
            <div class="col2">
                 <div class="col3">
-                    <button class="time"> 1:00 PM </button>
+                        <input type="radio" id="1pm" value="1:00 PM" name="time" onclick="getTime()">
+                        <label for="1pm">1:00 PM</label><br>
+
+                        <input type="radio" id="115pm" value="1:15 PM" name="time" onclick="getTime()">
+                        <label for="115pm">1:15 PM</label><br>
+
+                        <input type="radio" id="130pm" value="1:30 PM" name="time" onclick="getTime()">
+                        <label for="130m">1:30 PM</label><br>
+
+                        <input type="radio" id="145pm" value="1:45 PM" name="time" onclick="getTime()">
+                        <label for="145pm">1:45 PM</label><br>
+
+                        <input type="radio" id="2pm" value="2:00 PM" name="time" onclick="getTime()">
+                        <label for="2pm">2:00 PM</label><br>
+
+                        <input type="radio" id="215pm" value="2:15 PM" name="time" onclick="getTime()">
+                        <label for="215pm">2:15 PM</label><br>
+
+                        <input type="radio" id="230pm" value="2:30 PM" name="time" onclick="getTime()">
+                        <label for="230pm">2:30 PM</label><br>
+                </div>
+
+
+<!--                     <button class="time"> 1:00 PM </button>
                     <button class="time"> 1:15 PM </button>
                     <button class="time"> 1:30 PM</button>
                     <button class="time"> 1:45 PM </button>
                     <button class="time"> 2:00 PM </button>
                     <button class="time"> 2:15 PM </button>
-                    <button class="time"> 2:30 PM </button>
-                </div>
+                    <button class="time"> 2:30 PM </button> -->
+
                 <div class="col2">
-                    <button class="time"> 2:45 PM </button>
+                    <input type="radio" id="245pm" name="time">
+                    <label for="245pm">2:45 PM</label><br>
+
+                    <input type="radio" id="3pm" name="time">
+                    <label for="3pm">3:00 PM</label><br>
+
+                    <input type="radio" id="315pm" name="time">
+                    <label for="315pm">3:15 PM</label><br>
+
+                    <input type="radio" id="330pm" name="time">
+                    <label for="330pm">3:30 PM</label><br>
+
+<!--                     <button class="time"> 2:45 PM </button>
                     <button class="time"> 3:00 PM </button>
                     <button class="time"> 3:15 PM </button>
-                    <button class="time"> 3:30 PM </button>
+                    <button class="time"> 3:30 PM </button> -->
                 </div>
 
             </div>

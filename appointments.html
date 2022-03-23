@@ -4,7 +4,8 @@
         <!-- styles -->
         <link rel="stylesheet" type="text/css" href="style.css">
         <!-- javascript -->
-        <script src="script.js" type="text/javascript"> </script>
+        <script src="main.js" type="text/javascript"> </script>
+        <script src="appointment.js" type="text/javascript"> </script>
         <!-- fonts -->
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     </head>
@@ -30,9 +31,9 @@
     <div id="content">
         <h1> Upcoming Appointments </h1>
         <button> <a class="buttonlink" href="productbrowsing.html"> Schedule New Appointment</a> </button>
-        <p> You have 1 Upcoming Appointment(s): </p>
+        <p id="upcomingText"> </p>
 
-        <div class="upcoming-appointments">
+        <div class="upcoming-appointments" id=upcomingAppointments>
                 <p class="appointment-title"> COVID-19 Tartan Test </p>
                 <p> March 18, 2022 </p>
                 <p id="expandModal"> View More Details </p>
