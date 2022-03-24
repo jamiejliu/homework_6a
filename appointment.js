@@ -50,39 +50,15 @@ function apptModal(type, date, time) {
   let modalType = document.getElementById("modalType");
   let modalDate = document.getElementById("modalDate");
   let modalTime = document.getElementById("modalTime")
-  // let location = document.getElementById("location");
-  // let edit = document.createElement("button")
-  // let notes = document.createElement("p");
-  // let modalContent = document.getElementById('modalContent')
-  // let leftContent = document.getElementById("modalLeft");
-  // let rightContent = document.getElementById("modalRight");
   modalType.innerHTML = type;
   modalDate.innerHTML = "Date: " + date;
   modalTime.innerHTML = "Time: " + time;
-  // location.innerHTML = "Location: E Campus Garage";
-  // notes.innerHTML = "Notes: Please arrive to your appointment within the 15 minute grace period.";
-  // edit.innerHTML = "Edit Appointment";
-
-  // modalContent.appendChild(modalType);
-  // modalLeft.appendChild(modalDate);
-  // modalLeft.appendChild(modalTime);
-  // modalLeft.appendChild(edit);
-  // modalRight.appendChild(location);
-  // modalRight.appendChild(notes);
-
   modal.style.display = "block";
 
-
-
-  // span.onclick = function() {
-  //   modal.style.display = "none";
-  //   document.getElementById("modalContent").innerHTML = "";
-  //   };
 
   window.onclick = function(event) {
   if (event.target == modal) {
       modal.style.display = "none";
-      //document.getElementById("modalContent").innerHTML = "";
     }
   };
 }
@@ -90,7 +66,6 @@ function apptModal(type, date, time) {
 function spanClose(){
   var modal = document.getElementById("detailsModal");
   modal.style.display = "none";
-   //document.getElementById("modalContent").innerHTML = "";
 }
 
 loadAppointments();
