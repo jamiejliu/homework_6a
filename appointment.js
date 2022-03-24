@@ -1,42 +1,49 @@
 // Load Existing Appointments onto Appointments Page
 function loadAppointments() {
   let upcomingText = document.getElementById("upcomingText");
-  let upcomingAppointments = document.getElementById("upcomingAppointments");
   var appts = JSON.parse(localStorage.getItem("appts"));
+  let upcomingAppointments = document.getElementById("upcomingAppointments")
   console.log(appts);
   if (appts === null) {
     appts = [];
     let noAppointments = document.createElement("p");
-    noAppointments.innerHTML = "No upcoming appointments scheduled.";
+    noAppointments.innerHTML = "You have no upcoming appointments scheduled.";
     upcomingAppointments.appendChild(noAppointments);
     upcomingText.innerHTML = "Upcoming Appointments: 0"
   }
 
   else {
+
     // Display Each Upcoming Appointment
+    let col1 = document.getElementById("upcomingAppointmentsLeft")
+    let col2 = document.getElementById("upcomingAppointmentsRight")
     for (let i=0; i < appts.length; i++) {
-      upcomingText.innerHTML = "Upcoming Appointments: " + appts.length;
+      upcomingText.innerHTML = "You have " + appts.length + " upcoming appointment(s).";
       let appt = document.createElement("div");
-      appt.classList.add("appointment");
-      let type = document.createElement("p");
-      let date = document.createElement("p");
-      let viewDetails = document.createElement("a");
+      appt.classList.add("upcoming-appointments");
+      let type = document.createElement("h3");
+      let date = document.createElement("dateText");
+      let viewDetails = document.createElement("expandModal");
+      // let details = document.createElement("expandModal");
       type.innerHTML = appts[i].type;
       date.innerHTML = appts[i].date;
       appt.appendChild(type);
       appt.appendChild(date);
-      viewDetails.setAttribute("id", "modalLink");
+      viewDetails.setAttribute("id", "expandModal");
 
       //Fill in Appointment Details
       viewDetails.setAttribute("onclick", 'apptModal("${appts[i].type}", "${appts[i].date}, "${appts[i].time}")');
-      edit.classList.add("small-button");
-      edit.innerHTML = "Edit Appointment";
-      cancel.classList.add("small-button");
-      cancel.innerHTML = "Cancel Appointment";
+      viewDetails.classList.add("expandModal");
+      viewDetails.innerHTML = "More Details";
       appt.appendChild(viewDetails);
-      appt.appendChild(edit);
-      appt.appendChild(cancel);
-      upcomingAppointments(appts);
+      // appt.appendChild(details);
+      if(i%2 == 0){
+        col1.appendChild(appt)
+      }
+      else {
+        col2.appendChild(appt)
+      }
+      //upcomingAppointments.appendChild(appt);
     }
   }
 }

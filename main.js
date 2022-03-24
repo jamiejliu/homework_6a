@@ -73,4 +73,3 @@ function newAppointment() {
     localStorage.setItem("appts",JSON.stringify(appts));
 }
 
-
